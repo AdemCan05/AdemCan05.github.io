@@ -1,1 +1,0 @@
-# AdemCan05.github.io

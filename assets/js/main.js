@@ -368,3 +368,40 @@ let change = ()=> {
 	document.querySelectorAll("a.button").forEach(x=>x.classList.toggle("change"))
 	document.querySelectorAll("p.copyright em").forEach(x=>x.classList.toggle("change"))
 	
+	if(readLocalChange()){
+	removeLocalChange()
+	}else{
+	setLocalChange()
+	}
+ 
+}
+
+function secretLinks(){
+
+let cheatSheet = {
+    "Email":"ademcan.demirci.05@gmail.com",
+    "Linkedin":"https://www.linkedin.com/in/adem-can-demirci-100acd100/",
+    "Twitter":"https://twitter.com/_AdemmCann_",
+    "Github":"https://github.com/AdemCan05",
+}
+const success = [
+ 'background: #3d4449',
+ 'color: white',
+ 'display: block',
+ 'text-align: center'
+].join(';');
+
+const warn = [
+ 'background: gold',
+ 'color: white',
+ 'display: block',
+ 'text-align: center'
+].join(';');
+
+console.clear()
+console.warn("%c...you are probably not supposed to be here...",warn)
+console.group("%c...but heres the secret links!",success)
+console.table(cheatSheet)
+}
+
+secretLinks()

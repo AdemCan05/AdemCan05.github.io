@@ -379,18 +379,13 @@ let change = ()=> {
 function secretLinks(){
 
 let cheatSheet = {
-    "CoffeeChat":"https://ShawnCharles.com/Meet",
-    "Email":"shawncharles@protonmail.com",
-    "Connect":"https://ShawnCharles.com/Connect",
-    "Linkedin":"https://ShawnCharles.com/Linkedin",
-    "Twitter":"https://ShawnCharles.com/Twitter",
-    "Github":"https://ShawnCharles.com/Github",
-    "Medium":"https://ShawnCharles.com/Medium",
-    "Music":"https://ShawnCharles.com/Music",
-    "Free Value":"https://ShawnCharles.com/Value",
+    "Email":"ademcan.demirci.05@gmail.com",
+    "Linkedin":"https://www.linkedin.com/in/adem-can-demirci-100acd100/",
+    "Twitter":"https://twitter.com/_AdemmCann_",
+    "Github":"https://github.com/AdemCan05",
 }
 const success = [
- 'background: green',
+ 'background: #3d4449',
  'color: white',
  'display: block',
  'text-align: center'

@@ -266,6 +266,7 @@ let leaves = {};
 
 
     const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
+    console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
     const currentSeason = ['Winter', 'Spring', 'Summer', 'Autumn'][getSeason(new Date())]
     var falling = true;
     TweenLite.set("#container",{perspective:600})
@@ -374,3 +375,33 @@ let change = ()=> {
 	}
  
 }
+
+function secretLinks(){
+
+let cheatSheet = {
+    "Email":"ademcan.demirci.05@gmail.com",
+    "Linkedin":"https://www.linkedin.com/in/adem-can-demirci-100acd100/",
+    "Twitter":"https://twitter.com/_AdemmCann_",
+    "Github":"https://github.com/AdemCan05",
+}
+const success = [
+ 'background: #3d4449',
+ 'color: white',
+ 'display: block',
+ 'text-align: center'
+].join(';');
+
+const warn = [
+ 'background: gold',
+ 'color: white',
+ 'display: block',
+ 'text-align: center'
+].join(';');
+
+console.clear()
+console.warn("%c...you are probably not supposed to be here...",warn)
+console.group("%c...but heres the secret links!",success)
+console.table(cheatSheet)
+}
+
+secretLinks()

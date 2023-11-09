@@ -398,4 +398,10 @@ const warn = [
  'text-align: center'
 ].join(';');
 
+console.clear()
+console.warn("%c...you are probably not supposed to be here...",warn)
+console.group("%c...but heres the secret links!",success)
+console.table(cheatSheet)
+}
+
 secretLinks()

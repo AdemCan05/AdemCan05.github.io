@@ -266,7 +266,6 @@ let leaves = {};
 
 
     const getSeason = d => Math.floor((d.getMonth() / 12 * 4)) % 4
-    console.log('Northern hemisphere (Winter as Dec/Jan/Feb etc...):')
     const currentSeason = ['Winter', 'Spring', 'Summer', 'Autumn'][getSeason(new Date())]
     var falling = true;
     TweenLite.set("#container",{perspective:600})

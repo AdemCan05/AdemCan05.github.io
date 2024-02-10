@@ -154,6 +154,10 @@ Get in touch to find the next answer together!</span><br><br>
 				change()
 				change()
 
+				if (location.protocol !== 'https:') {
+        location.replace(`https:${location.href.substring(location.protocol.length)}`);
+    }
+
 			</script>
 
 	</body>

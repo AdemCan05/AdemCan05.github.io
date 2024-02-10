@@ -319,64 +319,25 @@ TweenLite.set("img",{xPercent:"-50%",yPercent:"-50%"})
 total = 100;
         })(); break;
     }
-
-//Local Storage state changes
-let setLocalChange = ()=> localStorage.setItem("CharlesChange","true");
-let readLocalChange = ()=> localStorage.getItem("CharlesChange");
-let removeLocalChange = ()=> localStorage.removeItem("CharlesChange");
-    
-
-
-let change = ()=> {
-	// console.log(currentSeason)
-	 if(document.querySelector("body.change")){
-		 switch(currentSeason){
-		 case "Winter" : snowStorm.toggleSnow(); break;
-		 case "Summer" : snowStorm.toggleSnow(); break;
-		 case "Autumn" : leaves.stop(); break;
-		 case "Spring" : snowStorm.toggleSnow(); break;
-	 }
-		 
-		 document.querySelector("[onclick='change()']").classList = "icon fa-moon change"
- 
- 
-	 }else{
-		 switch(currentSeason){
-		 case "Winter" : snowStorm.toggleSnow(); break;
-		 case "Summer" : snowStorm.toggleSnow(); break;
-		 case "Autumn" : leaves.fall(); break;
-		 case "Spring" : snowStorm.toggleSnow(); break;
-	 }
-		 
-		 document.querySelector("[onclick='change()']").classList = "icon fa-sun"
- 
- 
-	 }
-	 document.querySelector("#sidebar").classList.toggle("change")
-	 document.querySelector("#search.alt").classList.toggle("change")
-	 document.querySelector("body").classList.toggle("change")
-	 document.querySelectorAll("h1").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("h2").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("h3").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("h4").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("h5").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("h6").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("b").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("strong").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("ul.icons li .icon").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("ul.contact a").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("a.button").forEach(x=>x.classList.toggle("change"))
-	 document.querySelectorAll("p.copyright em").forEach(x=>x.classList.toggle("change"))
-	 
-	 if(readLocalChange()){
-	 removeLocalChange()
-	 }else{
-	 setLocalChange()
-	 }
-  
- }
- 
-
+	function change() {
+		// Toggle night mode or any other feature here
+		document.querySelector("#sidebar").classList.toggle("change");
+		document.querySelector("#search.alt").classList.toggle("change");
+		document.querySelector("body").classList.toggle("change");
+		document.querySelectorAll("h1").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("h2").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("h3").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("h4").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("h5").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("h6").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("b").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("strong").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("ul.icons li .icon").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("ul.contact a").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("a.button").forEach(x => x.classList.toggle("change"));
+		document.querySelectorAll("p.copyright em").forEach(x => x.classList.toggle("change"));
+	}
+		
 function secretLinks(){
 
 let cheatSheet = {

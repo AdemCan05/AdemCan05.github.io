@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adem Can Demirci | Futuristic Portfolio</title>
+    
+    <!-- Inline script to prevent theme flash -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Phosphor Icons for ultra-clean look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- SVG Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+    <div class="stars"></div>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Background CSS Blobs for Anti-Gravity effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="logo">
+                <img src="images/logo.png" alt="ACD Logo" class="logo-img">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#journey" class="nav-link">Journey</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link nav-btn">Let's Talk</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="icon-btn magnetic" aria-label="Toggle Theme">
+                    <i class="ph ph-sun sun-icon"></i>
+                    <i class="ph ph-moon moon-icon"></i>
+                </button>
+                
+                <!-- Language Switcher -->
+                <a href="index-tr.html" class="icon-btn magnetic lang-btn" aria-label="Switch to Turkish" style="font-family: var(--font-heading); font-size: 1rem; font-weight: 600; text-decoration: none;">TR</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="section hero glass-parallax">
+            <div class="hero-content">
+                <h2 class="greeting">Hello, I'm</h2>
+                <h1 class="name">Adem Can Demirci</h1>
+                <div class="title-container">
+                    <span class="static-text">A </span>
+                    <span class="typewriter" id="typewriter" data-words='["Computer Engineer", "Software Developer", "AI Enthusiast"]'>Computer Engineer</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-desc">Building the future of software with elegant engineering and cutting-edge design.</p>
+                
+                <div class="cta-group">
+                    <a href="#projects" class="glass-btn primary magnetic">
+                        <span>View Projects</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#contact" class="glass-btn secondary magnetic">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="glass-card full-card parallax-card">
+                <div class="card-inner-glow"></div>
+                <div class="about-content">
+                    <h3>Engineering the Future</h3>
+                    <p>I am a Software Developer and Computer Engineering student obsessed with pushing the boundaries of technology. My primary focus lies at the intersection of AI, robust software architecture, and modern web development.</p>
+                    <p>Whether I'm designing complex backend systems, building intuitive user interfaces, or training machine learning models, I strive to create solutions that are not only highly functional but also a joy to use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey / Experience Section -->
+        <section id="journey" class="section journey">
+            <div class="section-header">
+                <h2 class="section-title">My Journey</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">2023</span>
+                        <h3 class="timeline-title">Started Computer Engineering</h3>
+                        <h4 class="timeline-subtitle">Iskenderun Technical University</h4>
+                        <p class="timeline-desc">Began studying Computer Engineering and built a strong foundation in programming, algorithms, mathematics, and software development.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">2025</span>
+                        <h3 class="timeline-title">AI & Software Development Focus</h3>
+                        <p class="timeline-desc">Focused on Artificial Intelligence, Data Science, and Software Development. Developed academic and personal projects while improving software engineering skills.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot featured-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container featured-milestone">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date featured-date">06 Jul 2026 – 07 Aug 2026</span>
+                        <h3 class="timeline-title">Software Development Intern <span style="font-size: 0.75em; opacity: 0.8; font-weight: 500;">(Upcoming)</span></h3>
+                        <h4 class="timeline-subtitle highlight-text">Talay Logistics</h4>
+                        <p class="timeline-desc">Upcoming summer internship where I will contribute to the development and maintenance of internal logistics software systems. Expected to work on backend services, databases, software improvements, and business process automation while collaborating on real-world projects.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">Present</span>
+                        <h3 class="timeline-title">Future Goals</h3>
+                        <p class="timeline-desc">Building innovative software projects, expanding expertise in Artificial Intelligence and Software Engineering, and continuously learning modern technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <h2 class="section-title">Featured Work</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="https://github.com/AdemCan05/Hi-Kod-MobilProje" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-1">
+                        <i class="ph ph-device-mobile"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hi-Kod Mobile Project</h3>
+                        <p>A comprehensive mobile application developed using Dart and Flutter.</p>
+                        <div class="tech-stack">
+                            <span>Dart</span>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="https://github.com/AdemCan05/tesla_analyzing" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-2">
+                        <i class="ph ph-chart-line-up"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tesla Data Analysis</h3>
+                        <p>A data science project analyzing Tesla stock and market data using Jupyter Notebooks.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://github.com/AdemCan05/Ortalama-Hesaplama" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-3">
+                        <i class="ph ph-calculator"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Grade Calculator</h3>
+                        <p>A web-based application designed to calculate exam averages and letter grades.</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>Web</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2 class="section-title">Technical Arsenal</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-code"></i> Languages</h4>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript (ES6+)</span>
+                        <span>TypeScript</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-brain"></i> AI & Data</h4>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-globe"></i> Web Dev</h4>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-wrench"></i> Tools</h4>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="glass-card full-card parallax-card contact-grid">
+                <div class="card-inner-glow"></div>
+                
+                <div class="contact-info">
+                    <h3>Let's build the future together.</h3>
+                    <p>I'm open for new opportunities, collaborations, or just a tech chat.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/AdemCan05" target="_blank" rel="noopener noreferrer" class="social-btn glass-btn magnetic" aria-label="GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/adem-can-demircii/" target="_blank" rel="noopener noreferrer" class="social-btn glass-btn magnetic" aria-label="LinkedIn">
+                            <i class="ph ph-linkedin-logo"></i> LinkedIn
+                        </a>
+                        <a href="mailto:ademcan@example.com" class="social-btn glass-btn primary magnetic" aria-label="Email">
+                            <i class="ph ph-envelope-simple"></i> Email Me
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="POST" id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required placeholder=" " rows="4"></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="glass-btn primary magnetic">
+                        <span>Send Message</span>
+                        <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Adem Can Demirci. Designed with precision.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

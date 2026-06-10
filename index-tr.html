@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adem Can Demirci | Fütüristik Portfolyo</title>
+    
+    <!-- Inline script to prevent theme flash -->
+    <script>
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.classList.add('light-mode');
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Phosphor Icons for ultra-clean look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <!-- SVG Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+    <div class="stars"></div>
+
+    <!-- Custom Cursor Glow -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- Background CSS Blobs for Anti-Gravity effect -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav" id="navbar">
+        <div class="nav-content">
+            <a href="#hero" class="logo">
+                <img src="images/logo.png" alt="ACD Logo" class="logo-img">
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">Hakkımda</a>
+                <a href="#journey" class="nav-link">Kariyerim</a>
+                <a href="#projects" class="nav-link">Projeler</a>
+                <a href="#skills" class="nav-link">Yetenekler</a>
+                <a href="#contact" class="nav-link nav-btn">İletişim</a>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="icon-btn magnetic" aria-label="Toggle Theme">
+                    <i class="ph ph-sun sun-icon"></i>
+                    <i class="ph ph-moon moon-icon"></i>
+                </button>
+                
+                <!-- Language Switcher -->
+                <a href="index.html" class="icon-btn magnetic lang-btn" aria-label="Switch to English" style="font-family: var(--font-heading); font-size: 1rem; font-weight: 600; text-decoration: none;">EN</a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menu">
+                <i class="ph ph-list"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero" class="section hero glass-parallax">
+            <div class="hero-content">
+                <h2 class="greeting">Merhaba, Ben</h2>
+                <h1 class="name">Adem Can Demirci</h1>
+                <div class="title-container">
+                    <span class="static-text"></span>
+                    <span class="typewriter" id="typewriter" data-words='["Bilgisayar Mühendisi", "Yazılım Geliştirici", "Yapay Zeka Tutkunu"]'>Bilgisayar Mühendisi</span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-desc">Zarif mühendislik ve son teknoloji tasarım ile yazılımın geleceğini inşa ediyorum.</p>
+                
+                <div class="cta-group">
+                    <a href="#projects" class="glass-btn primary magnetic">
+                        <span>Projeleri Gör</span>
+                        <div class="btn-glow"></div>
+                    </a>
+                    <a href="#contact" class="glass-btn secondary magnetic">
+                        <span>Bana Ulaşın</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about">
+            <div class="section-header">
+                <h2 class="section-title">Hakkımda</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="glass-card full-card parallax-card">
+                <div class="card-inner-glow"></div>
+                <div class="about-content">
+                    <h3>Geleceği Tasarlamak</h3>
+                    <p>Teknolojinin sınırlarını zorlamaya tutkuyla bağlı bir Yazılım Geliştiricisi ve Bilgisayar Mühendisliği öğrencisiyim. Odak noktam; yapay zeka, güçlü yazılım mimarisi ve modern web geliştirmenin kesişimidir.</p>
+                    <p>Karmaşık arka uç sistemleri tasarlarken, sezgisel kullanıcı arayüzleri oluştururken veya makine öğrenimi modelleri eğitirken, sadece son derece işlevsel değil, aynı zamanda kullanımı keyifli çözümler yaratmaya çabalıyorum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey / Experience Section -->
+        <section id="journey" class="section journey">
+            <div class="section-header">
+                <h2 class="section-title">Kariyer Yolculuğum</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">2023</span>
+                        <h3 class="timeline-title">Bilgisayar Mühendisliğine Başlangıç</h3>
+                        <h4 class="timeline-subtitle">İskenderun Teknik Üniversitesi</h4>
+                        <p class="timeline-desc">Bilgisayar Mühendisliği eğitimine başladım ve programlama, algoritmalar, matematik ve yazılım geliştirme konularında güçlü bir temel oluşturdum.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">2025</span>
+                        <h3 class="timeline-title">Yapay Zeka ve Yazılım Odaklanması</h3>
+                        <p class="timeline-desc">Yapay Zeka, Veri Bilimi ve Yazılım Geliştirme alanlarına odaklandım. Yazılım mühendisliği becerilerimi geliştirirken akademik ve kişisel projeler ürettim.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item left">
+                    <div class="timeline-dot featured-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container featured-milestone">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date featured-date">06 Tem 2026 – 07 Ağu 2026</span>
+                        <h3 class="timeline-title">Yazılım Geliştirme Stajyeri <span style="font-size: 0.75em; opacity: 0.8; font-weight: 500;">(Beklenen)</span></h3>
+                        <h4 class="timeline-subtitle highlight-text">Talay Lojistik</h4>
+                        <p class="timeline-desc">Dahili lojistik yazılım sistemlerinin geliştirilmesine ve bakımına katkıda bulunacağım yaklaşan yaz stajım. Gerçek dünya projelerinde arka uç (backend) servisleri, veritabanları, yazılım iyileştirmeleri ve iş süreci otomasyonu üzerinde çalışarak deneyim kazanmayı hedefliyorum.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card parallax-card magnetic-container">
+                        <div class="card-inner-glow"></div>
+                        <span class="timeline-date">Günümüz</span>
+                        <h3 class="timeline-title">Gelecek Hedefleri</h3>
+                        <p class="timeline-desc">Yenilikçi yazılım projeleri geliştiriyor, Yapay Zeka ve Yazılım Mühendisliği alanlarındaki uzmanlığımı genişletiyor ve modern teknolojileri sürekli olarak öğreniyorum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects">
+            <div class="section-header">
+                <h2 class="section-title">Öne Çıkan Projeler</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="https://github.com/AdemCan05/Hi-Kod-MobilProje" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-1">
+                        <i class="ph ph-device-mobile"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hi-Kod Mobil Proje</h3>
+                        <p>Dart ve Flutter kullanılarak geliştirilmiş kapsamlı bir mobil uygulama.</p>
+                        <div class="tech-stack">
+                            <span>Dart</span>
+                            <span>Flutter</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="https://github.com/AdemCan05/tesla_analyzing" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-2">
+                        <i class="ph ph-chart-line-up"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Tesla Veri Analizi</h3>
+                        <p>Jupyter Notebook kullanılarak Tesla hisse ve piyasa verilerini analiz eden bir veri bilimi projesi.</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Veri Analizi</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://github.com/AdemCan05/Ortalama-Hesaplama" target="_blank" rel="noopener noreferrer" class="project-card glass-card parallax-card magnetic-container">
+                    <div class="card-inner-glow"></div>
+                    <div class="project-image gradient-3">
+                        <i class="ph ph-calculator"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3>Not Ortalaması Hesaplama</h3>
+                        <p>Sınav ortalamalarını ve harf notlarını hesaplamak için tasarlanmış web tabanlı bir uygulama.</p>
+                        <div class="tech-stack">
+                            <span>JavaScript</span>
+                            <span>Web</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills">
+            <div class="section-header">
+                <h2 class="section-title">Teknik Yetenekler</h2>
+                <div class="title-line"></div>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-code"></i> Diller</h4>
+                    <div class="skill-tags">
+                        <span>Python</span>
+                        <span>JavaScript (ES6+)</span>
+                        <span>TypeScript</span>
+                        <span>Java</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-brain"></i> Yapay Zeka & Veri</h4>
+                    <div class="skill-tags">
+                        <span>Machine Learning</span>
+                        <span>TensorFlow</span>
+                        <span>PyTorch</span>
+                        <span>Data Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-globe"></i> Web Geliştirme</h4>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>Node.js</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="skill-category glass-card parallax-card">
+                    <div class="card-inner-glow"></div>
+                    <h4><i class="ph ph-wrench"></i> Araçlar</h4>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>Docker</span>
+                        <span>Linux</span>
+                        <span>AWS</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact">
+            <div class="section-header">
+                <h2 class="section-title">İletişime Geçin</h2>
+                <div class="title-line"></div>
+            </div>
+
+            <div class="glass-card full-card parallax-card contact-grid">
+                <div class="card-inner-glow"></div>
+                
+                <div class="contact-info">
+                    <h3>Geleceği birlikte inşa edelim.</h3>
+                    <p>Yeni fırsatlara, işbirliklerine veya sadece teknoloji üzerine sohbete her zaman açığım.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/AdemCan05" target="_blank" rel="noopener noreferrer" class="social-btn glass-btn magnetic" aria-label="GitHub">
+                            <i class="ph ph-github-logo"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/adem-can-demircii/" target="_blank" rel="noopener noreferrer" class="social-btn glass-btn magnetic" aria-label="LinkedIn">
+                            <i class="ph ph-linkedin-logo"></i> LinkedIn
+                        </a>
+                        <a href="mailto:ademcan@example.com" class="social-btn glass-btn primary magnetic" aria-label="Email">
+                            <i class="ph ph-envelope-simple"></i> Email Me
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="POST" id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Adınız</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">E-posta Adresiniz</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" required placeholder=" " rows="4"></textarea>
+                        <label for="message">Mesajınız</label>
+                    </div>
+                    <button type="submit" class="glass-btn primary magnetic">
+                        <span>Mesaj Gönder</span>
+                        <i class="ph ph-paper-plane-right"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Adem Can Demirci. Designed with precision.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
